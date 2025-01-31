@@ -1,0 +1,26 @@
+body {
+    padding-top: 10px;
+    text-align: center;
+}
+
+header,footer{
+    background-color:rgb(67, 110, 173) ;
+    text-align:center ;
+    color: white;
+}
+
+div{
+    background-color:rgb(170, 213, 238) ;
+}
+
+main{
+    background-color:rgb(60, 95, 209) ;
+}
+
+aside{
+    background-color:rgb(147, 123, 212) ;
+}
+
+article{
+    background-color:rgb(89, 72, 148) ;
+}
