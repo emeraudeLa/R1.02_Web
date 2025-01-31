@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" lang="fr">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Media Query</title>
+    <style>
+        /*------------- Mise en forme ----------------*/
+        body {
+            font: 1.2em Helvetica, arial, sans-serif;
+            background-color: #999999;
+        }
+
+        header,
+        main,
+        nav,
+        aside,
+        footer {
+            margin: 10px;
+            padding: 5px;
+            border-radius: 10px;
+        }
+
+        main {
+            background-color: #47b9d7;
+        }
+
+        nav {
+            background-color: #466dd7;
+        }
+
+        aside {
+            background-color: #466dd7;
+        }
+
+        header,
+        footer {
+            min-height: 10vh;
+            background-color: #52f7ee;
+        }
+
+        /*------------- FlexBox ----------------*/
+        div  {
+            display: flex ;            
+            flex-direction: row;       
+            flex-wrap: nowrap;         
+            /* flex-flow: row nowrap;*/
+        }
+
+        main {
+            flex-grow: 4;             /*Agrandissement*/
+            flex-shrink: 1;           /*Rétrécissement*/
+            flex-basis: 30em;         /*Dimension de base*/
+        }
+
+        nav {
+            flex: 0 0 8em;
+            order: -1;                /*Réordonnancement*/
+
+        }
+
+        aside {
+            flex: 1 1 15em;
+        }
+
+        /*------------- Media Query -------------*/
+        @media screen and (max-width: 960px) {
+            div {
+                flex-direction: column;   /*Affichage en colonne*/
+            }
+
+            nav {
+                order : 0;                /*Réordonnancement*/
+            }
+        }
+
+        @media screen and (max-width: 640px) {
+            nav {
+                order : -1;                /*Réordonnancement*/
+            }
+            
+            aside {
+                display: none;        /* Masquage du bloc aside*/
+            }
+        }
+        
+
+
+    </style>
+</head>
+
+<body>
+    <header>Header</header>
+    <div>
+        <main>main</main>
+        <nav>nav</nav>
+        <aside>aside</aside>
+    </div>
+    <footer>footer</footer>
+</body>
+
+</html>
